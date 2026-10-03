@@ -19,6 +19,27 @@ Strip markdown in ALT tags
 <p><img src="#" alt="strip markdown in alt"></p>
 .
 
+Keep escaped chars in ALT
+.
+![a \* b](#)
+.
+<p><img src="#" alt="a * b"></p>
+.
+
+Keep entities in ALT
+.
+![a &amp; b &lt; c](#)
+.
+<p><img src="#" alt="a &amp; b &lt; c"></p>
+.
+
+Keep escaped chars and entities in ALT, strip markup
+.
+![a \* *b* &amp; c](#)
+.
+<p><img src="#" alt="a * b &amp; c"></p>
+.
+
 Issue #55:
 .
 ![test]
